@@ -1,0 +1,34 @@
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Verificar Datos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p>Apellido: {{formulario.apellido.value}}</p>
+                <p>Nombre: {{formulario.nombre.value}}</p>
+                <p>Tipo de Documento: {{formulario.tipoDoc.value}}</p>
+                <p>Número de Documento: {{formulario.nroDoc.value}}</p>
+                <p>Fecha de Nacimiento: {{formulario.fechaNacimiento.value}}</p>
+                <p>Estado Civil: {{formulario.estadoCivil.value}}</p>
+                <p>Dirección: {{formulario.direccion.value}}</p>
+                <p>Piso: {{formulario.piso.value}}</p>
+                <p>Dpto: {{formulario.dpto.value}}</p>
+                <p>Provincia: {{formulario.provincia.value}}</p>
+                <p>Localidad: {{formulario.localidad.value}}</p>
+                <p>Código Postal: {{formulario.cp.value}}</p>
+                <p *ngIf="formulario.sexo.value === 'false'" >Sexo: Masculino</p>
+                <p *ngIf="formulario.sexo.value === 'true'" >Sexo: Femenino</p>
+                <p>Email: {{formulario.email.value}}</p>
+                <p>Número de Telefono: {{formulario.nroTelefono.value}}</p>
+                <p>Teléfono Móvil: +54{{formulario.telMovil.value}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="confirmIncobrable" class="btn btn-outline-success normalBtn" data-bs-dismiss="modal">Confirmar</button>
+                <button type="button" class="btn normalBtn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,150 @@
+<form [formGroup]="registerForm">
+    <div id="mainContainer" class="p-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Llenar Formulario</h4>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" formControlName="apellido" placeholder="" value="" required="true"
+                            maxlength="45" />
+                        <div class="invalid-feedback">
+                            El apellido es obligatorio.
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" formControlName="nombre" placeholder="" value="" required="true"
+                            maxlength="45" />
+                        <div class="invalid-feedback">
+                            El nombre es obligatorio.
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <label for="tipoDoc">Tipo de Documento</label>
+                        <select class="form-control" formControlName="tipoDoc">
+                            <option>Selecionar..</option>
+                            <option>DNI</option>
+                            <option>Pasaporte</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Por favor selecciona un tipo de documento.
+                        </div>
+                    </div>
+                    <div class="col-md-9 mb-3">
+                        <label for="nroDoc">Número de Documento</label>
+                        <input type="text" id="nroDoc" class="form-control" formControlName="nroDoc" required="true"
+                            maxlength="8" mask="00000000" />
+                        <div id="nroDocError" class="invalid-feedback">
+                            El número de documento es obligatorio.
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                        <input autocomplete="off" mask="d0/M0/0000" type="text" class="form-control" id="fechaNacimiento" formControlName="fechaNacimiento"
+                            required="true" />
+                        <div class="invalid-feedback">
+                            Por favor selecciona una fecha.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="estadoCivil">Estado Civil</label>
+                        <select class="form-control" formControlName="estadoCivil">
+                            <option>Selecionar..</option>
+                            <option>Soltero</option>
+                            <option>Casado</option>
+                            <option>Viudo</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Por favor selecciona un estado civil.
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" class="form-control" formControlName="direccion" placeholder="Calle roble 1234" required="true"
+                        maxlength="45" />
+                    <div class="invalid-feedback">
+                        La dirección es obligatoria.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <label for="piso">Piso</label>
+                        <input type="text" formControlName="piso" mask="00" maxlength="2" class="form-control" />
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="dpto">Dpto</label>
+                        <input type="text" formControlName="dpto" id="dpto" maxlength="3" class="form-control" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="provincia">Provincia</label>
+                        <input type="text" class="form-control" formControlName="provincia" id="provincia" required="true" />
+                        <div class="invalid-feedback">
+                            Por favor selecciona una provincia.
+                        </div>
+                    </div>
+                    <div class="col-md-5 mb-3">
+                        <label for="localidad">Localidad</label>
+                        <input type="text" class="form-control" formControlName="localidad" id="localidad" required="true" />
+                        <div class="invalid-feedback">
+                            Por favor selecciona una localidad.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="cp">Código Postal</label>
+                        <input type="text" class="form-control" mask="0000" formControlName="cp" id="cp" required="true" maxlength="6" />
+                        <div class="invalid-feedback">
+                            El código Postal es obligatorio.
+                        </div>
+                    </div>
+                </div>
+                <h4 class="mb-3">Sexo</h4>
+                <div class="d-block my-3">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" formControlName="sexo" id="sexoMasc" value="false" class="custom-control-input" />
+                        <label class="custom-control-label" for="sexoMasc">Masculino</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" name="sexo" formControlName="sexo" id="sexoFem" value="true" class="custom-control-input" />
+                        <label class="custom-control-label" for="sexoFem">Femenino</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" formControlName="email" placeholder="tu@ejemplo.com" maxlength="45" required />
+                    <div class="invalid-feedback">
+                        Por favor ingresa un Email valido.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <label for="nroTelefono">Teléfono Fijo</label>
+                        <input type="text" id="nroTelefono" mask="0000 000000" formControlName="nroTelefono" class="form-control" />
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="telMovil">Teléfono Celular</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">+54</div>
+                            </div>
+                            <input type="text" id="telMovil" mask="0000 0000000" formControlName="telMovil" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-outline-primary btn-block" id="submit" type="button" data-bs-toggle="modal"
+                        data-bs-target="#modal">Enviar Datos
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-modal [formulario]="f"></app-modal>
+</form>

@@ -1,0 +1,8 @@
+#mainContainer{
+    background-color: rgb(139 202 205);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}

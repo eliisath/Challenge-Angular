@@ -1,0 +1,10 @@
+.card {
+    width: 400px;
+    margin: 10px;
+    padding: 40px;
+    align-content: center;
+}
+
+.requisito {
+    color: rgb(194, 3, 3);
+}
