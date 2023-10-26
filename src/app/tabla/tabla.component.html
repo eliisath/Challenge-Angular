@@ -1,7 +1,7 @@
 <h2>Tabla de Datos</h2>
 <div id="mainContainer" class="p-5">
     <div style="text-align: center;">
-        <igx-grid [data]="localData" [allowFiltering]="true">
+        <igx-grid [data]="localData" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
             <igx-column field="NombreApellido" dataType="string"></igx-column>
             <igx-column field="DNI" dataType="number"></igx-column>
             <igx-column field="FechaNacimiento" dataType="string"></igx-column>
